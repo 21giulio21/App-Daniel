@@ -13,10 +13,35 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    static var utenteLoggato:Utente?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        
+        if let utenteLoggato = AppDelegate.utenteLoggato
+        {
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "Main")
+            
+            self.window?.rootViewController = initialViewController
+            
+        }else
+        {
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginSignupVC")
+            
+            self.window?.rootViewController = initialViewController
+            
+        }
+        
+        
+        
+        
+        self.window?.makeKeyAndVisible()
         return true
     }
 

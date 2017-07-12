@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6076BC51F1678CB00FCD86E /* Utente.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6076BC41F1678CB00FCD86E /* Utente.swift */; };
 		B6695CF01F100448001461CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6695CEF1F100448001461CF /* AppDelegate.swift */; };
 		B6695CF21F100448001461CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6695CF11F100448001461CF /* ViewController.swift */; };
 		B6695CF51F100448001461CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6695CF31F100448001461CF /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B6076BC41F1678CB00FCD86E /* Utente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utente.swift; sourceTree = "<group>"; };
 		B6695CEC1F100448001461CF /* App Daniel Levy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Daniel Levy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6695CEF1F100448001461CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6695CF11F100448001461CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				B6695CEF1F100448001461CF /* AppDelegate.swift */,
 				B6695CF11F100448001461CF /* ViewController.swift */,
+				B6076BC41F1678CB00FCD86E /* Utente.swift */,
 				B6695CF31F100448001461CF /* Main.storyboard */,
 				B6695CF91F100448001461CF /* Assets.xcassets */,
 				B6695CFB1F100448001461CF /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6076BC51F1678CB00FCD86E /* Utente.swift in Sources */,
 				B6695CF81F100448001461CF /* App_Daniel_Levy.xcdatamodeld in Sources */,
 				B6695CF21F100448001461CF /* ViewController.swift in Sources */,
 				B6695CF01F100448001461CF /* AppDelegate.swift in Sources */,
@@ -306,6 +310,7 @@
 				B6695D031F100448001461CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
