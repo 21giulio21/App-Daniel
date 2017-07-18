@@ -1,1 +1,10 @@
 1) Perche non mettiamo il login da facebook ?
+
+Pagina iniziale ipotesi:
+1) inserire tipo segugio.it due domande con due opzioni: Cerco un lavoro / offro un lavoro
+
+2) inserire una mappa con i lavori più vicini
+
+3) inserire una pagina di cerco lavoro una di inserisci lavoro ecc
+
+4) oppure ??
