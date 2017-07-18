@@ -1,4 +1,6 @@
 1) Perche non mettiamo il login da facebook ?
+2) perché non inseriamo una finestrella quando mi registro per la prima volta con scritto come funziona ?
+
 
 Pagina iniziale ipotesi:
 1) inserire tipo segugio.it due domande con due opzioni: Cerco un lavoro / offro un lavoro
