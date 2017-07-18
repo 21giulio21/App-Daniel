@@ -14,6 +14,7 @@ class CreoAccountController: UIViewController, UIPickerViewDataSource, UIPickerV
         return 1
     }
 
+    public var accssoController: AccessoController?
 
     @IBOutlet weak var nome: UITextField!
     @IBOutlet weak var cognome: UITextField!
@@ -22,6 +23,7 @@ class CreoAccountController: UIViewController, UIPickerViewDataSource, UIPickerV
     @IBOutlet weak var confermaPassword: UITextField!
     @IBOutlet weak var data: UIPickerView!
  
+    // Array contentente gli anni che devono essere mostrati a video
     var Num = [String]()
     
     
@@ -33,6 +35,10 @@ class CreoAccountController: UIViewController, UIPickerViewDataSource, UIPickerV
         data.dataSource = self
         
     }
+    
+    //  Riempio il UIPickerView con i numeri da 1930 a 2018
+    //  Cosi viene scelta l'anno di nascita in quell'intervallo
+    //
     
     func riempimentoNum()
     {
@@ -46,23 +52,57 @@ class CreoAccountController: UIViewController, UIPickerViewDataSource, UIPickerV
      
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    //  Speficico che ci vede essere una sola sezione nel UIPickerView
+    //
+    //
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
+    
+    //  Specifico che devono esserci tanti elementi nel UIPickerView
+    //  quanti presenti nell'array Num
+    //
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
     {
         return Num.count
     }
+    
+    //  Specifico quali devono essere gli elementi nel UIPickerView
+    //
+    //
+
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return Num[row]
     }
     
+    @IBAction func pressCancellButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+
+    }
    
+    @IBAction func pressVaiButton(_ sender: Any) {
+        
+        AppDelegate.utenteLoggato = Utente()
+        dismiss(animated: true, completion: nil)
+        self.accssoController?.dismiss()
+    
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
     
 
 
