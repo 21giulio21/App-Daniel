@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B60380951F21466F006D9B24 /* CercaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60380941F21466F006D9B24 /* CercaController.swift */; };
 		B6076BC51F1678CB00FCD86E /* Utente.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6076BC41F1678CB00FCD86E /* Utente.swift */; };
 		B6076BC71F16869F00FCD86E /* CreoAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6076BC61F16869F00FCD86E /* CreoAccountController.swift */; };
 		B6076BC91F177E6D00FCD86E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6076BC81F177E6D00FCD86E /* LoginController.swift */; };
 		B6076BCB1F17932300FCD86E /* AccessoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6076BCA1F17932300FCD86E /* AccessoController.swift */; };
+		B637BF521F20E1BE00D09468 /* CercoAiutoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B637BF511F20E1BE00D09468 /* CercoAiutoController.swift */; };
+		B637BF541F20E1F800D09468 /* OffroAiutoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B637BF531F20E1F800D09468 /* OffroAiutoController.swift */; };
 		B6695CF01F100448001461CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6695CEF1F100448001461CF /* AppDelegate.swift */; };
 		B6695CF21F100448001461CF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6695CF11F100448001461CF /* MainViewController.swift */; };
 		B6695CF51F100448001461CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6695CF31F100448001461CF /* Main.storyboard */; };
@@ -20,10 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B60380941F21466F006D9B24 /* CercaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CercaController.swift; sourceTree = "<group>"; };
 		B6076BC41F1678CB00FCD86E /* Utente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utente.swift; sourceTree = "<group>"; };
 		B6076BC61F16869F00FCD86E /* CreoAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreoAccountController.swift; sourceTree = "<group>"; };
 		B6076BC81F177E6D00FCD86E /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		B6076BCA1F17932300FCD86E /* AccessoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessoController.swift; sourceTree = "<group>"; };
+		B637BF511F20E1BE00D09468 /* CercoAiutoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CercoAiutoController.swift; sourceTree = "<group>"; };
+		B637BF531F20E1F800D09468 /* OffroAiutoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffroAiutoController.swift; sourceTree = "<group>"; };
 		B6695CEC1F100448001461CF /* App Daniel Levy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Daniel Levy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6695CEF1F100448001461CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6695CF11F100448001461CF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B60380961F221B11006D9B24 /* Tab Bar View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B6695CF11F100448001461CF /* MainViewController.swift */,
+				B60380941F21466F006D9B24 /* CercaController.swift */,
+			);
+			name = "Tab Bar View Controller";
+			sourceTree = "<group>";
+		};
 		B6076BCC1F17932600FCD86E /* Accesso Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +68,15 @@
 				B6076BCA1F17932300FCD86E /* AccessoController.swift */,
 			);
 			name = "Accesso Controller";
+			sourceTree = "<group>";
+		};
+		B637BF551F20E20700D09468 /* Cerco/Offro aiuto Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B637BF511F20E1BE00D09468 /* CercoAiutoController.swift */,
+				B637BF531F20E1F800D09468 /* OffroAiutoController.swift */,
+			);
+			name = "Cerco/Offro aiuto Controller";
 			sourceTree = "<group>";
 		};
 		B6695CE31F100448001461CF = {
@@ -74,9 +98,10 @@
 		B6695CEE1F100448001461CF /* App Daniel Levy */ = {
 			isa = PBXGroup;
 			children = (
+				B60380961F221B11006D9B24 /* Tab Bar View Controller */,
+				B637BF551F20E20700D09468 /* Cerco/Offro aiuto Controller */,
 				B6076BCC1F17932600FCD86E /* Accesso Controller */,
 				B6695CEF1F100448001461CF /* AppDelegate.swift */,
-				B6695CF11F100448001461CF /* MainViewController.swift */,
 				B6076BC41F1678CB00FCD86E /* Utente.swift */,
 				B6695CF31F100448001461CF /* Main.storyboard */,
 				B6695CF91F100448001461CF /* Assets.xcassets */,
@@ -160,6 +185,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B60380951F21466F006D9B24 /* CercaController.swift in Sources */,
+				B637BF541F20E1F800D09468 /* OffroAiutoController.swift in Sources */,
 				B6076BC51F1678CB00FCD86E /* Utente.swift in Sources */,
 				B6076BC91F177E6D00FCD86E /* LoginController.swift in Sources */,
 				B6076BCB1F17932300FCD86E /* AccessoController.swift in Sources */,
@@ -167,6 +194,7 @@
 				B6695CF21F100448001461CF /* MainViewController.swift in Sources */,
 				B6076BC71F16869F00FCD86E /* CreoAccountController.swift in Sources */,
 				B6695CF01F100448001461CF /* AppDelegate.swift in Sources */,
+				B637BF521F20E1BE00D09468 /* CercoAiutoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
