@@ -30,6 +30,14 @@ public class WelcomeActivity extends AppCompatActivity {
                 // Leggo dalle SharedPreference se l'utente si è gia loggato
 
                 SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+
+                /*
+                 * Scrivo sulle shared preference solo per debug
+                 */
+                SharedPreferences.Editor editor = sharedPref.edit();
+                editor.putInt("alreadyLogged", 1);
+                editor.commit();
+
                 int alreadyLogged = sharedPref.getInt("alreadyLogged", 0);
 
                 if (alreadyLogged == 1){
@@ -42,7 +50,7 @@ public class WelcomeActivity extends AppCompatActivity {
                 }
                 else{
                     /*
-                       Se l'utente non risulta loggato è richiesto il login o
+                       Se l'utente non risulta loggato è richiesto il login
                      */
                     Intent i = new Intent(WelcomeActivity.this, LoginActivity.class);
                     // i.putExtra("alreadyLogged", 1);
