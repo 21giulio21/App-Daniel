@@ -20,10 +20,14 @@
 		B6695CF81F100448001461CF /* App_Daniel_Levy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6695CF61F100448001461CF /* App_Daniel_Levy.xcdatamodeld */; };
 		B6695CFA1F100448001461CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6695CF91F100448001461CF /* Assets.xcassets */; };
 		B6695CFD1F100448001461CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6695CFB1F100448001461CF /* LaunchScreen.storyboard */; };
+		B678963D2322631B7B567146 /* Pods_App_Daniel_Levy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9B592971848973AF299CC1 /* Pods_App_Daniel_Levy.framework */; };
+		B6C0E7641F5AB283007F8376 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C0E7631F5AB283007F8376 /* Util.swift */; };
 		B6F07D4C1F24C83A006E1BD9 /* Citta.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F07D4B1F24C83A006E1BD9 /* Citta.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		305AE00D159DF0C4D82C86BC /* Pods-App Daniel Levy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App Daniel Levy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App Daniel Levy/Pods-App Daniel Levy.debug.xcconfig"; sourceTree = "<group>"; };
+		6E9B592971848973AF299CC1 /* Pods_App_Daniel_Levy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_Daniel_Levy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60380941F21466F006D9B24 /* CercaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CercaController.swift; sourceTree = "<group>"; };
 		B60380971F2382C5006D9B24 /* OffriController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffriController.swift; sourceTree = "<group>"; };
 		B60380991F2382D9006D9B24 /* ProfiloController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfiloController.swift; sourceTree = "<group>"; };
@@ -39,7 +43,9 @@
 		B6695CF91F100448001461CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6695CFC1F100448001461CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6695CFE1F100448001461CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6C0E7631F5AB283007F8376 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		B6F07D4B1F24C83A006E1BD9 /* Citta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Citta.swift; sourceTree = "<group>"; };
+		C393106ACD36357B4E9F33D9 /* Pods-App Daniel Levy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App Daniel Levy.release.xcconfig"; path = "Pods/Target Support Files/Pods-App Daniel Levy/Pods-App Daniel Levy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,12 +53,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B678963D2322631B7B567146 /* Pods_App_Daniel_Levy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D3D17BEC9BD4FBCF3A71BA0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				305AE00D159DF0C4D82C86BC /* Pods-App Daniel Levy.debug.xcconfig */,
+				C393106ACD36357B4E9F33D9 /* Pods-App Daniel Levy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B60380961F221B11006D9B24 /* Tab Bar View Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +104,8 @@
 			children = (
 				B6695CEE1F100448001461CF /* App Daniel Levy */,
 				B6695CED1F100448001461CF /* Products */,
+				2D3D17BEC9BD4FBCF3A71BA0 /* Pods */,
+				C2E48AA9F9507F6CABAAE8D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +120,7 @@
 		B6695CEE1F100448001461CF /* App Daniel Levy */ = {
 			isa = PBXGroup;
 			children = (
+				B6C0E7621F5AB270007F8376 /* Util */,
 				B603809D1F24C7D0006D9B24 /* Models */,
 				B60380961F221B11006D9B24 /* Tab Bar View Controller */,
 				B6076BCC1F17932600FCD86E /* Accesso Controller */,
@@ -115,6 +134,22 @@
 			path = "App Daniel Levy";
 			sourceTree = "<group>";
 		};
+		B6C0E7621F5AB270007F8376 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				B6C0E7631F5AB283007F8376 /* Util.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		C2E48AA9F9507F6CABAAE8D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E9B592971848973AF299CC1 /* Pods_App_Daniel_Levy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +157,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6695D011F100448001461CF /* Build configuration list for PBXNativeTarget "App Daniel Levy" */;
 			buildPhases = (
+				C547A35EE9B5FFD445DB6653 /* [CP] Check Pods Manifest.lock */,
 				B6695CE81F100448001461CF /* Sources */,
 				B6695CE91F100448001461CF /* Frameworks */,
 				B6695CEA1F100448001461CF /* Resources */,
+				3F79B62A62F6A3A9DA2A4D58 /* [CP] Embed Pods Frameworks */,
+				D153B4FD22117129AAA9530F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,6 +221,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3F79B62A62F6A3A9DA2A4D58 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-App Daniel Levy/Pods-App Daniel Levy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C547A35EE9B5FFD445DB6653 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D153B4FD22117129AAA9530F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-App Daniel Levy/Pods-App Daniel Levy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B6695CE81F100448001461CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -195,6 +281,7 @@
 				B6076BCB1F17932300FCD86E /* AccessoController.swift in Sources */,
 				B6695CF81F100448001461CF /* App_Daniel_Levy.xcdatamodeld in Sources */,
 				B6695CF21F100448001461CF /* MainViewController.swift in Sources */,
+				B6C0E7641F5AB283007F8376 /* Util.swift in Sources */,
 				B6076BC71F16869F00FCD86E /* CreoAccountController.swift in Sources */,
 				B603809A1F2382D9006D9B24 /* ProfiloController.swift in Sources */,
 				B60380981F2382C5006D9B24 /* OffriController.swift in Sources */,
@@ -319,6 +406,7 @@
 		};
 		B6695D021F100448001461CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 305AE00D159DF0C4D82C86BC /* Pods-App Daniel Levy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W6VS4VYA7Q;
@@ -332,6 +420,7 @@
 		};
 		B6695D031F100448001461CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C393106ACD36357B4E9F33D9 /* Pods-App Daniel Levy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W6VS4VYA7Q;

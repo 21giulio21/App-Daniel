@@ -12,12 +12,10 @@ class Citta: NSObject
 {
     
     var id = ""
-    var regione = ""
     var nome = ""
     
-    init(id: String,regione:String,nome:String) {
+    init(id: String,nome:String) {
         self.id = id
-        self.regione = regione
         self.nome = nome
     }
     

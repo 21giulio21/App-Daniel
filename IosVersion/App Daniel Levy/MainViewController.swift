@@ -21,7 +21,7 @@ class MainViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDe
     
     // Array contentente il tipo dell'aiuto e il posto
     var tipoAiutoArray = [String]()
-    var provinciaArray = [String]()
+    var cittaArray = [Citta]()
     
     
     
@@ -59,10 +59,16 @@ class MainViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDe
         tipoAiutoArray.append("Commisioni e spesa a casa")
         tipoAiutoArray.append("Compagnia anziani")
         
+        /*
+        Per scaricare le città mi collego al database e quando ha finito riaggiorno l'array delle città
+         */
+        scaricoCittaDalDatabase { (arrayCitta) in
+            self.cittaArray = arrayCitta
+            self.provinciaPicker.reloadAllComponents()
+            
+        }
         
-        provinciaArray.append("Genova")
-        provinciaArray.append("Milano")
-        provinciaArray.append("Roma")
+        
         
         
     
@@ -108,11 +114,11 @@ class MainViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDe
     {
         if tipoAiutoPicker == pickerView
         {
-            return tipoAiutoArray.count
+            return self.tipoAiutoArray.count
         }
         else
         {
-            return provinciaArray.count
+            return self.cittaArray.count
         }
         
     }
@@ -128,7 +134,7 @@ class MainViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDe
         }
         else
         {
-            return provinciaArray[row]
+            return cittaArray[row].nome
         }
     }
 
