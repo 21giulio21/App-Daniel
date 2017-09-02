@@ -25,15 +25,17 @@ if ($conn->connect_error) {
 
 /////////////////////////////////////// INIZIO PREPARAZIONE QUERY ///////////////////////////////////////
 
+$nome = $_GET['nome'];
+$cognome = $_GET['cognome'];
 $email = $_GET['email'];
 $password = $_GET['password'];
-
+$annoDiNascita = $_GET['annoDiNascita'];
 
 // preparo la query senza inserire qui i valori ma inserisco dei '?' tanti quanti saranno i parametri
 // da passare alla query
-$stmt = $conn->prepare("SELECT *  FROM clienti_clienti  WHERE cliente_email=? AND cliente_password=?");
+$stmt = $conn->prepare("INSERT INTO clienti_clienti  VALUES(NULL,?,?,?,?,?,'','','','','','','','','','','','','','','','','','') ");
 // inserisco nella query 3 stringhe identificate da 'sss'
-$stmt->bind_param("ss", $email, $password);
+$stmt->bind_param("sssss", $nome, $cognome, $email, $password, $annoDiNascita);
 
 
 // eseguo la query
@@ -41,7 +43,7 @@ $stmt->execute();
 
  $stmt->store_result();
 
- printf("Number of rows: %d.\n", $stmt->num_rows);
+ //printf("Number of rows: %d.\n", $stmt->num_rows);
 
 
 $stmt->close();

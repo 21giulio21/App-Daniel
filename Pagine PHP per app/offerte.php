@@ -25,15 +25,15 @@ if ($conn->connect_error) {
 
 /////////////////////////////////////// INIZIO PREPARAZIONE QUERY ///////////////////////////////////////
 
-$email = $_GET['email'];
-$password = $_GET['password'];
+$da = $_GET['da'];
+$quante = 20;
 
 
 // preparo la query senza inserire qui i valori ma inserisco dei '?' tanti quanti saranno i parametri
 // da passare alla query
-$stmt = $conn->prepare("SELECT *  FROM clienti_clienti  WHERE cliente_email=? AND cliente_password=?");
+$stmt = $conn->prepare("SELECT * FROM clienti_offerte  ");
 // inserisco nella query 3 stringhe identificate da 'sss'
-$stmt->bind_param("ss", $email, $password);
+$stmt->bind_param("s", $da);
 
 
 // eseguo la query

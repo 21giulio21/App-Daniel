@@ -17,13 +17,13 @@ class MainViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDe
 
     @IBOutlet weak var tipoAiutoPicker: UIPickerView!
     @IBOutlet weak var provinciaPicker: UIPickerView!
-    // Array contentente gli anni che devono essere mostrati a video
-    var Num = [String]()
     
-    override func viewWillAppear(_ animated: Bool) {
-        //self.navigationController?.navigationBar.isHidden = true
-        perform(#selector(controlloLogin), with: nil, afterDelay: 0)
-    }
+    
+    // Array contentente il tipo dell'aiuto e il posto
+    var tipoAiutoArray = [String]()
+    var provinciaArray = [String]()
+    
+    
     
     override func viewDidDisappear(_ animated: Bool) {
         //self.navigationController?.navigationBar.isHidden = false
@@ -55,19 +55,24 @@ class MainViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDe
     
     func riempimentoPicker()
     {
+        tipoAiutoArray.append("Baby sitter")
+        tipoAiutoArray.append("Commisioni e spesa a casa")
+        tipoAiutoArray.append("Compagnia anziani")
         
-        for i in stride(from: 1930, through: 2018, by: 1)
-        {
-            Num.append("\(i)")
-        }
-        Num.sort { (a, b) -> Bool in
-            a > b
-        }
+        
+        provinciaArray.append("Genova")
+        provinciaArray.append("Milano")
+        provinciaArray.append("Roma")
+        
+        
     
     }
 
-   
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        //self.navigationController?.navigationBar.isHidden = true
+        perform(#selector(controlloLogin), with: nil, afterDelay: 0)
+    }
     
     func controlloLogin()
     {
@@ -86,6 +91,7 @@ class MainViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDe
     
         
     }
+
     
     //  Speficico che ci vede essere una sola sezione nel UIPickerView
     //
@@ -100,7 +106,15 @@ class MainViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDe
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
     {
-        return Num.count
+        if tipoAiutoPicker == pickerView
+        {
+            return tipoAiutoArray.count
+        }
+        else
+        {
+            return provinciaArray.count
+        }
+        
     }
     
     //  Specifico quali devono essere gli elementi nel UIPickerView
@@ -108,7 +122,14 @@ class MainViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDe
     //
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return Num[row]
+        if tipoAiutoPicker == pickerView
+        {
+            return tipoAiutoArray[row]
+        }
+        else
+        {
+            return provinciaArray[row]
+        }
     }
 
 
